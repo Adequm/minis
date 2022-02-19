@@ -1,23 +1,28 @@
 import Vue from 'vue';
+const store = {};
 
-// import minisTranslate from '../assets/translate.json';
-// import minisList from '../assets/minisList.json';
+store.state = () => ({
+  minisLang: 'ru',
+  minisTheme: 'dark',
+  translate: {},
+  minisList: {},
+});
 
-export default {
-  state: () => ({
-    minisLang: 'ru',
-    minisTheme: 'dark',
-    // minisList,
-  }),
-
-  // getters: {
-  //   translate: state => minisTranslate[state.minisLang].home,
-  // },
-
-  mutations: {
-    switchTheme(state) {
-      const newTheme = state.minisTheme == 'light' ? 'dark' : 'light';
-      Vue.set(state, 'minisTheme', newTheme);
-    },
+store.getters = {
+  translate({ translate, minisLang }) {
+    return path => translate?.[minisLang]?.calculator?.[path] || 'Err';
   },
 };
+
+store.mutations = {
+  switchTheme(state) {
+    const newTheme = state.minisTheme == 'light' ? 'dark' : 'light';
+    Vue.set(state, 'minisTheme', newTheme);
+  },
+  initMinis(state, { translate, minisList }) {
+    Vue.set(state, 'minisList', minisList);
+    Vue.set(state, 'translate', translate);
+  },
+};
+
+export default store;

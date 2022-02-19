@@ -8,12 +8,13 @@ import minisModule from './minis';
 const store = {};
 Vue.use(Vuex);
 
-
 const persistedMinis = ['minis.minisTheme', 'minis.minisLang'];
+const persistedLocal = [];
 store.modules = { minis: minisModule };
 store.plugins = [
-  // createMutationsSharer({ predicate: () => pluginsState }),
-  createPersistedState({ paths: persistedMinis }),
+  createMutationsSharer({ predicate: () => persistedMinis }),
+  createPersistedState({ paths: persistedMinis, key: 'minis' }),
+  createPersistedState({ paths: persistedLocal, key: 'minis-home' }),
 ];
 
 export default new Vuex.Store(store);
