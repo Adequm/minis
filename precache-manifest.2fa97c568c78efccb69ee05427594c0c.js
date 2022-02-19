@@ -32,6 +32,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/minisList.json"
   },
   {
+    "revision": "71bcfe33ec22b6c3459e03bea5cab31d",
+    "url": "/minis/themesList.json"
+  },
+  {
     "revision": "d5bab4a07ebf2b0e4ce3ecb87a16aab6",
     "url": "/minis/translate.json"
   }
