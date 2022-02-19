@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/calculator/precache-manifest.70852aac076e46f794d04e46afc5ccce.js"
+  "/calculator/precache-manifest.9e59eca149f86c261be04f7b1667fdc9.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "calculator"});
+workbox.core.setCacheNameDetails({prefix: "minis"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
