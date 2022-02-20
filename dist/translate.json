@@ -2,6 +2,9 @@
   "ru": {
     "calculator": {
       "title": "Калькулятор"
+    },
+    "priorities": {
+      "title": "Приоритеты"
     }
   }
 }
