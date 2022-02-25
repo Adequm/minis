@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1e5b8e481dc72886db68",
+    "revision": "56043f2112ca1a4ca0f3",
     "url": "/minis/css/app.6a0a5637.css"
   },
   {
@@ -12,12 +12,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/img/confetti.e975c70f.svg"
   },
   {
-    "revision": "cd08d3408f3a1e1eb592b396f995f4a5",
+    "revision": "c4dc88601d9c930deb13fdcd3ebe4279",
     "url": "/minis/index.html"
   },
   {
-    "revision": "1e5b8e481dc72886db68",
-    "url": "/minis/js/app.a2455e7e.js"
+    "revision": "56043f2112ca1a4ca0f3",
+    "url": "/minis/js/app.46a36f62.js"
   },
   {
     "revision": "98ca29e7a498b0f33eef",
@@ -28,15 +28,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/manifest.json"
   },
   {
-    "revision": "0597c0260178982505b1ffff0fcc21c4",
-    "url": "/minis/minisList.json"
+    "revision": "c6ae4eb2ce1f558602284c25c0483b20",
+    "url": "/minis/minisJSON.json"
   },
   {
-    "revision": "71bcfe33ec22b6c3459e03bea5cab31d",
-    "url": "/minis/themesList.json"
+    "revision": "03ba8e3291511894f98c6d4372b36842",
+    "url": "/minis/themesJSON.json"
   },
   {
-    "revision": "d5bab4a07ebf2b0e4ce3ecb87a16aab6",
-    "url": "/minis/translate.json"
+    "revision": "e5245e48c40414486251202c6614003c",
+    "url": "/minis/translateJSON.json"
   }
 ]);

@@ -1,0 +1,46 @@
+{
+  "special": {
+    "default": "green",
+    "colors": {
+      "brick": { "normal": "#f44336" },
+      "lilac": { "normal": "#9c27b0" },
+      "violet": { "normal": "#673ab7" },
+      "darkblue": { "normal": "#3f51b5" },
+      "blue": { "normal": "#03a9f4" },
+      "aquamarine": { "normal": "#009688" },
+      "green": { "normal": "#8bc34a" },
+      "orange": { "normal": "#ff9800" },
+      "darkorange": { "normal": "#ff5722" },
+      "brown": { "normal": "#795548" },
+      "gray": { "normal": "#9e9e9e" },
+      "stone": { "normal": "#607d8b" }
+    }
+  },
+
+  "default:": {
+    "light" : "#EDEEF0",
+    "dark" : "#14171E",
+    "error" : "#e91e63",
+    "success" : "#4caf50",
+    "warning" : "#ffc107"
+  },
+
+  "main": {
+    "light": {
+      "icon": "sun",
+      "colors": {
+        "main-bg-color": "#EDEEF0",
+        "content-bg-color": "#FFFFFF",
+        "text-color": "#232425"
+      }
+    },
+    "dark": {
+      "icon": "moon",
+      "colors": {
+        "main-bg-color": "#14171E",
+        "content-bg-color": "#1B1F26",
+        "text-color": "#F3F3F3"
+      }
+    }
+  }
+}

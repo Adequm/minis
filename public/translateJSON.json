@@ -1,0 +1,22 @@
+{
+  "ru": {
+    "calculator": {
+      "title": "Калькулятор",
+      "error": "Ошибка"
+    },
+    "priorities": {
+      "title": "Приоритеты",
+      "error": "Ошибка"
+    }
+  },
+  "en": {
+    "calculator": {
+      "title": "Calculator",
+      "error": "Error"
+    },
+    "priorities": {
+      "title": "Priorities",
+      "error": "Error"
+    }
+  }
+}
