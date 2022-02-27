@@ -1,22 +1,30 @@
 {
   "ru": {
-    "calculator": {
-      "title": "Калькулятор",
+    "default": {
       "error": "Ошибка"
     },
-    "priorities": {
-      "title": "Приоритеты",
-      "error": "Ошибка"
+    "calculator": {
+      "title": "Калькулятор"
+    },
+    "comparison": {
+      "title": "Приоритеты"
+    },
+    "wishes": {
+      "title": "Пожелания"
     }
   },
   "en": {
-    "calculator": {
-      "title": "Calculator",
+    "default": {
       "error": "Error"
     },
-    "priorities": {
-      "title": "Priorities",
-      "error": "Error"
+    "calculator": {
+      "title": "Calculator"
+    },
+    "comparison": {
+      "title": "Priorities"
+    },
+    "wishes": {
+      "title": "Wishes"
     }
   }
 }
