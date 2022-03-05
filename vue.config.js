@@ -1,3 +1,7 @@
 module.exports = {
-  publicPath: '/minis/'
+  publicPath: '/minis/',
+  pwa: {
+    name: 'Проект «Minis»',
+    themeColor: '#333333',
+  }
 }
