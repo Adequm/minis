@@ -19,6 +19,10 @@
         @switchFullscreen="isFullscreen = !isFullscreen"
       />
 
+      <div class="layout-empty">
+        <Icon type="home" :size="100"/>
+      </div>
+
       <!-- <LayoutContent
         ref="layoutContent"
         :appWidth="appWidth" 
@@ -66,13 +70,13 @@ import Icon from './components/app/Icon';
 import SettingsDesktop from './components/app/SettingsDesktop';
 import SettingsMobile from './components/app/SettingsMobile';
 import AppModal from './components/app/AppModal';
-import LayoutContent from './components/LayoutContent';
+// import LayoutContent from './components/LayoutContent';
 
 import { mapState } from 'vuex';
 
 export default {
   components: {
-    LayoutContent,
+    // LayoutContent,
     AppModal,
     SettingsDesktop,
     SettingsMobile,
@@ -89,7 +93,6 @@ export default {
   }),
 
   watch: {
-    isPageLoad: 'autoResize',
     isDesktop(isDesktop) {
       if(isDesktop && this.openedModalName == 'settings') {
         this.openedModalName = null;
@@ -182,6 +185,18 @@ body {
       box-shadow: 0 3px 0 2px var(--main-bg-color);
       border-radius: 10px;
       box-sizing: border-box;
+
+      .layout-empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--special-color);
+        height: inherit;
+        background-color: var(--content-bg-color);
+        position: relative;
+        z-index: 1;
+        border-radius: 10px;
+      }
 
       .confirmation {
         display: flex;
