@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/img/confetti.e975c70f.svg"
   },
   {
-    "revision": "8d882a0c30a36bc0aaef7d861d89ee0a",
+    "revision": "2fdeeee14ef5729244fe52207c60f3a4",
     "url": "/minis/index.html"
   },
   {
@@ -36,23 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/themesJSON.json"
   },
   {
-    "revision": "fb57150927a56e0256e7f0310c8a1107",
+    "revision": "90a105cd804e2586e207dfbf4c81dc1c",
     "url": "/minis/translateJSON.json"
-  },
-  {
-    "revision": "b1eab1a13c7e89c167bd546c7b5bc90a",
-    "url": "/minis/uicons/uicons-regular-straight.eot"
-  },
-  {
-    "revision": "706b86fa881ef644c6af4b9b66acdc98",
-    "url": "/minis/uicons/uicons-regular-straight.woff"
-  },
-  {
-    "revision": "92fb69a78d45a096e792b703b411150e",
-    "url": "/minis/uicons/uicons-regular-straight.woff2"
-  },
-  {
-    "revision": "09ba82f4b8e22897e9e47526ced7a2f0",
-    "url": "/minis/uicons/uicons-rs.css"
   }
 ]);
