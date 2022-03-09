@@ -47,7 +47,10 @@
     },
     "wishes": {
       "title": "Пожелания",
-      "header": "Желаю"
+      "header": "Желаю",
+      "display": {
+        "description": "с пожеланием"
+      }
     }
   },
   "en": {
