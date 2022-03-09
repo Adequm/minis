@@ -8,7 +8,11 @@
       "change": "Выбрать",
       "update": "Обновить"
     },
+    "home": {
+      "title": "Проект «Minis»"
+    },
     "2048": {
+      "title" : "2048",
       "modal": {
         "newRecord": "Новый рекорд!"
       }
@@ -60,7 +64,21 @@
   },
   "en": {
     "default": {
-      "error": "Error"
+      "error": "Error",
+      "delete": "Delete",
+      "edit": "Edit",
+      "add": "Add",
+      "change": "Change",
+      "update": "Update"
+    },
+    "home": {
+      "title": "Project «Minis»"
+    },
+    "2048": {
+      "title" : "2048",
+      "modal": {
+        "newRecord": "New record!"
+      }
     },
     "calculator": {
       "title": "Calculator"
