@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/themesJSON.json"
   },
   {
-    "revision": "1a21088597241b2ddc296db888c44d1e",
+    "revision": "1c8e635eef85cedb534dfc11904df81c",
     "url": "/minis/translateJSON.json"
   }
 ]);
