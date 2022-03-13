@@ -7,7 +7,7 @@ import minisModule from './minis';
 const projectKey = 'minis-home';
 
 const store = {
-  projectKey: projectKey.split('-').slice(-1)[0],
+  projectKey: projectKey.split('-').slice(1).join('-'),
 };
 Vue.use(Vuex);
 
