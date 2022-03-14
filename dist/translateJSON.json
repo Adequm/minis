@@ -60,6 +60,39 @@
       "display": {
         "description": "с пожеланием"
       }
+    },
+    "docx-template": { 
+      "title": "Шаблонизатор DOCX",
+      "editor": {
+        "title": "Редактор",
+        "textareas": {
+          "placeholders": {
+            "key": "Ключ",
+            "value": "Результат"
+          }
+        },
+        "displays": {
+          "empty": {
+            "title": "Список ключей пуст"
+          }
+        }
+      },
+      "files": {
+        "title": "Файлы",
+        "inputs": {
+          "files": { 
+            "placeholder": "Файлы"
+          },
+          "folders": { 
+            "placeholder": "Папки"
+          }
+        },
+        "displays": {
+          "empty": {
+            "title": "Список файлов пуст"
+          }
+        }
+      }
     }
   },
   "en": {
