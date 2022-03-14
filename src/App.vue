@@ -1,13 +1,14 @@
 <template>
   <div 
     class="container" 
+    :class="{ fullscreen: isFullscreen }"
     :style="{ 
       height: `${ innerHeight }px`, 
       maxWidth: isDesktop ? `${ containerWidth }px` : '100vw',
       maxHeight: isDesktop ? `${ containerHeight }px` : '100vh',
     }"
   >
-    <Icon v-if="!isPageLoad" type="loader" class="loader" :size="100" rotate/>
+    <Icon v-if="!isPageLoad" type="time-oclock" class="loader" :size="100" rotate/>
 
     <div v-else class="minis__wrapper">
       <SettingsDesktop
@@ -16,12 +17,15 @@
         v-model="isClosedSettings"
         @switchTheme="switchTheme"
         @switchLang="switchLang"
-        @switchFullscreen="isFullscreen = !isFullscreen"
+        @switchFullscreen="switchFullscreen"
       />
 
-      <div class="layout-empty">
-        <Icon type="home" :size="100"/>
-      </div>
+      <LayoutContent
+        ref="layoutContent"
+        :isDesktop="isDesktop"
+        :style="{ filter: openedModalName ? 'blur(2px)' : 'none' }"
+        @openModal="openedModalName = $event"
+      />
 
       <!-- <LayoutContent
         ref="layoutContent"
@@ -44,7 +48,7 @@
           :isWidthMore768="isWidthMore768"
           @switchTheme="switchTheme"
           @switchLang="switchLang"
-          @switchFullscreen="isFullscreen = !isFullscreen"
+          @switchFullscreen="switchFullscreen"
         />
       </AppModal>
 
@@ -66,21 +70,22 @@ import minisMixin from './mixins/minis.mixin';
 import resizeMixin from './mixins/resize.mixin';
 import faviconMixin from './mixins/favicon.mixin';
 import translateMixin from './mixins/translate.mixin';
+
 import Icon from './components/app/Icon';
 import SettingsDesktop from './components/app/SettingsDesktop';
 import SettingsMobile from './components/app/SettingsMobile';
 import AppModal from './components/app/AppModal';
-// import LayoutContent from './components/LayoutContent';
+import LayoutContent from './components/LayoutContent';
 
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
   components: {
-    // LayoutContent,
     AppModal,
     SettingsDesktop,
     SettingsMobile,
     Icon,
+    LayoutContent,
   },
 
   mixins: [minisMixin, resizeMixin, faviconMixin, translateMixin],
@@ -89,7 +94,6 @@ export default {
     lodash: _,
     isClosedSettings: true,
     openedModalName: null,
-    slideIndexHistory: 0,
   }),
 
   watch: {
@@ -101,26 +105,8 @@ export default {
     },
   },
 
-  computed: {
-    ...mapState(['savedHistory']),
-  },
-
   methods: {
-    getFormatDate(dateNow) {
-      if(!dateNow) return this.translate('error');
-      const date = new Date(dateNow);
-      const day = date.getDate().toString().padStart(2, 0);
-      const month = (date.getMonth() + 1).toString().padStart(2, 0);
-      const year = date.getFullYear();
-      const hour = date.getHours().toString().padStart(2, 0);
-      const minutes = date.getMinutes().toString().padStart(2, 0);
-      return `${ day }.${ month }.${ year } | ${ hour }:${ minutes }`;
-    },
-
-    removeFromHistoryHandler() {
-      this.$refs.layoutContent.removeFromHistoryHandler(this.slideIndexHistory);
-      this.openedModalName = null;
-    },
+    ...mapMutations(['switchFullscreen']),
   },
 
   beforeMount() {
@@ -185,18 +171,6 @@ body {
       box-shadow: 0 3px 0 2px var(--main-bg-color);
       border-radius: 10px;
       box-sizing: border-box;
-
-      .layout-empty {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--special-color);
-        height: inherit;
-        background-color: var(--content-bg-color);
-        position: relative;
-        z-index: 1;
-        border-radius: 10px;
-      }
 
       .confirmation {
         display: flex;
