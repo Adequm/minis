@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
 import createMutationsSharer from 'vuex-shared-mutations';
 
-import minisModule from './minis';
+import { vuexMinisModule as minisModule, persistedMinis } from '@minis-core/mixins';
 const projectKey = 'minis-home';
 
 const store = {};
@@ -20,14 +20,6 @@ store.mutations = {
 };
 
 
-const persistedMinis = [
-  'minis.minisThemeMain', 
-  'minis.minisThemeSpecial', 
-  'minis.minisLang',
-  'minis.themesJSON', 
-  'minis.translateJSON', 
-  'minis.minisJSON',
-];
 const persistedLocal = [
   // 'isFullscreen',
 ];

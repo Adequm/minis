@@ -23,12 +23,12 @@
 import _ from 'lodash';
 import { mapState } from 'vuex';
 
-import tralsateMixin from '../mixins/translate.mixin';
+import { translateMixin } from '@minis-core/mixins';
 
 export default {
 	name: 'LayoutContent',
 
-	mixins: [tralsateMixin],
+	mixins: [translateMixin],
 
 	data: () => ({
 		lodash: _,
