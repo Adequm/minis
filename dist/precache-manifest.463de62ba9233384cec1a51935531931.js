@@ -1,11 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3baec7a2c0ce0c26c50",
+    "revision": "2e34212f686648216e2d",
     "url": "/minis/css/app.1ec7a904.css"
   },
   {
-    "revision": "a8c8264a61e77ae89462",
-    "url": "/minis/css/chunk-vendors.4c891dc7.css"
+    "revision": "d48b092d2a3828f2af29",
+    "url": "/minis/css/chunk-vendors.e03e6274.css"
+  },
+  {
+    "revision": "706b86fa881ef644c6af4b9b66acdc98",
+    "url": "/minis/fonts/uicons-regular-straight.706b86fa.woff"
+  },
+  {
+    "revision": "92fb69a78d45a096e792b703b411150e",
+    "url": "/minis/fonts/uicons-regular-straight.92fb69a7.woff2"
+  },
+  {
+    "revision": "b1eab1a13c7e89c167bd546c7b5bc90a",
+    "url": "/minis/fonts/uicons-regular-straight.b1eab1a1.eot"
   },
   {
     "revision": "cb28e79a04c6965e946e2a45b3d2976d",
@@ -16,16 +28,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/img/confetti.e975c70f.svg"
   },
   {
-    "revision": "8e24bfeaed0dfd23b51815ba500128ae",
+    "revision": "b37f31577265ad87f571e24534698b7f",
     "url": "/minis/index.html"
   },
   {
-    "revision": "f3baec7a2c0ce0c26c50",
-    "url": "/minis/js/app.a94839aa.js"
+    "revision": "2e34212f686648216e2d",
+    "url": "/minis/js/app.4721a56c.js"
   },
   {
-    "revision": "a8c8264a61e77ae89462",
-    "url": "/minis/js/chunk-vendors.966483db.js"
+    "revision": "d48b092d2a3828f2af29",
+    "url": "/minis/js/chunk-vendors.f902310c.js"
   },
   {
     "revision": "b45fe23aa6e8a9c1882fcbc0d1eb7eed",
