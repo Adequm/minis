@@ -6,7 +6,13 @@
       "edit": "Редактировать",
       "add": "Добавить",
       "change": "Выбрать",
-      "update": "Обновить"
+      "update": "Обновить",
+      "settings": {
+        "lang": "Язык",
+        "theme": "Тема",
+        "color": "Оформленние",
+        "fullscreen": "Во весь экран"
+      }
     },
     "home": {
       "title": "Проект «Minis»"
@@ -102,7 +108,13 @@
       "edit": "Edit",
       "add": "Add",
       "change": "Change",
-      "update": "Update"
+      "update": "Update",
+      "settings": {
+        "lang": "Lang",
+        "theme": "Theme",
+        "color": "Color",
+        "fullscreen": "Fullscreen"
+      }
     },
     "home": {
       "title": "Project «Minis»"
@@ -117,10 +129,78 @@
       "title": "Calculator"
     },
     "comparison": {
-      "title": "Priorities"
+      "title": "Priorities",
+      "editor": {
+        "title": "Editor",
+        "displays": {
+          "priorities": {
+            "title": "List of compared priorities",
+            "placeholder": "Your priority"
+          },
+          "questions": {
+            "title": "List of clarifying questions",
+            "buttonAdd": "Add Standard Questions",
+            "placeholder": "Clarifying question",
+            "questionsList": [
+              "What's more important right now?", 
+              "What can be achieved faster?",
+              "What do you want more?"
+            ]
+          }
+        }
+      },
+      "history": {
+        "title": "History",
+        "displays": {
+          "history": {
+            "title": "History of your comparisons",
+            "buttonDeleteConfirm": "Are you sure you want to delete the history entry from"
+          }
+        }
+      },
+      "compare": {
+        "title": "Step"
+      }
     },
     "wishes": {
-      "title": "Wishes"
+      "title": "Wishes",
+      "header": "Wish",
+      "display": {
+        "description": "with a wish"
+      }
+    },
+    "docx-template": {
+      "title": "Templater DOCX",
+      "editor": {
+        "title": "Editor",
+        "textareas": {
+          "placeholders": {
+            "key": "Key",
+            "value": "Result"
+          }
+        },
+        "displays": {
+          "empty": {
+            "title": "Key list is empty"
+          }
+        }
+      },
+      "files": {
+        "title": "Files",
+        "inputs": {
+          "files": { 
+            "placeholder": "Files"
+          },
+          "folders": { 
+            "placeholder": "Folders"
+          }
+        },
+        "displays": {
+          "empty": {
+            "title": "File list is empty"
+          }
+        }
+      }
     }
   }
 }
