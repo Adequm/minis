@@ -21,7 +21,7 @@
         v-model="isClosedSettings"
         @switchTheme="switchTheme"
         @switchLang="switchLang"
-        @switchFullscreen="switchFullscreen"
+        @switchFullscreen="$store.commit(switchFullscreenKey)"
       />
 
       <LayoutContent
@@ -55,7 +55,7 @@
           :isWidthMore768="isWidthMore768"
           @switchTheme="switchTheme"
           @switchLang="switchLang"
-          @switchFullscreen="switchFullscreen"
+          @switchFullscreen="$store.commit(switchFullscreenKey)"
         />
       </AppModal>
 
@@ -85,7 +85,7 @@ import LayoutContent from './components/LayoutContent';
 import { AppLoader, AppModal, SettingsDesktop, SettingsMobile } from '@minis-core/components';
 import { minisMixin, resizeMixin, faviconMixin, translateMixin } from '@minis-core/mixins';
 
-import { mapState, mapMutations } from 'vuex';
+import { mapState } from 'vuex';
 
 export default {
   components: {
@@ -113,13 +113,13 @@ export default {
     },
   },
 
-  methods: {
-    ...mapMutations(['switchFullscreen']),
+  computed: {
+    ...mapState(['switchFullscreenKey']),
   },
 
   beforeMount() {
     document.body.addEventListener('click', event => {
-      if(document.body !== event.path[0]) return;
+      if(document.body !== _.get(event.path, 0)) return;
       if(!this.isDesktop) return;
       if(this.isClosedSettings) return;
       this.isClosedSettings = true;

@@ -12,6 +12,7 @@ Vue.use(Vuex);
 
 store.state = () => ({
   [fullscreenKey]: false,
+  switchFullscreenKey: `switch_${fullscreenKey}`,
   projectKey,
 });
 
@@ -22,12 +23,12 @@ store.getters = {
 
 
 store.mutations = {
-  switchFullscreen: state => Vue.set(state, fullscreenKey, !state[fullscreenKey]),
+  [`switch_${fullscreenKey}`]: state => Vue.set(state, fullscreenKey, !state[fullscreenKey]),
 };
 
 
 const persistedLocal = [
-  // 'isFullscreen',
+  // fullscreenKey,
 ];
 store.modules = { minis: minisModule };
 store.plugins = [
