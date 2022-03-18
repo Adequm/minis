@@ -22,7 +22,7 @@ store.getters = {
 
 
 store.mutations = {
-  switchFullscreen: state => Vue.set(state, 'isFullscreen', !state.isFullscreen),
+  switchFullscreen: state => Vue.set(state, fullscreenKey, !state[fullscreenKey]),
 };
 
 
