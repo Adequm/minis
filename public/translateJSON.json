@@ -11,7 +11,8 @@
         "lang": "Язык",
         "theme": "Тема",
         "color": "Оформленние",
-        "fullscreen": "Во весь экран"
+        "fullscreen": "Во весь экран",
+        "hints": "Подсказки"
       }
     },
     "home": {
@@ -113,7 +114,8 @@
         "lang": "Lang",
         "theme": "Theme",
         "color": "Color",
-        "fullscreen": "Fullscreen"
+        "fullscreen": "Fullscreen",
+        "hints": "Hints"
       }
     },
     "home": {
