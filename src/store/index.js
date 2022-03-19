@@ -4,26 +4,20 @@ import createPersistedState from 'vuex-persistedstate';
 import createMutationsSharer from 'vuex-shared-mutations';
 
 const projectKey = 'home';
-const fullscreenKey = `${ projectKey }-isFullscreen`;
+const switchFullscreenKey = `switchFullscreen_${projectKey}`;
 import { vuexMinisModule as minisModule, persistedMinis } from '@minis-core/mixins';
 
 const store = {};
 Vue.use(Vuex);
 
 store.state = () => ({
-  [fullscreenKey]: false,
-  switchFullscreenKey: `switch_${fullscreenKey}`,
+  isFullscreen: false,
+  switchFullscreenKey,
   projectKey,
 });
 
-
-store.getters = {
-  isFullscreen: state => state[fullscreenKey],
-};
-
-
 store.mutations = {
-  [`switch_${fullscreenKey}`]: state => Vue.set(state, fullscreenKey, !state[fullscreenKey]),
+  [switchFullscreenKey]: state => Vue.set(state, 'isFullscreen', !state.isFullscreen),
 };
 
 
