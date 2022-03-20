@@ -149,7 +149,7 @@
     }
   },
 
-  "default:": {
+  "default": {
     "light" : "#EDEEF0",
     "dark" : "#14171E",
     "error" : "#e91e63",
