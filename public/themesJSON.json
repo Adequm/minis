@@ -160,6 +160,7 @@
   "main": {
     "light": {
       "icon": "sun",
+      "shift": "1000",
       "colors": {
         "main-bg-color": "#EDEEF0",
         "content-bg-color": "#FFFFFF",
@@ -168,6 +169,7 @@
     },
     "dark": {
       "icon": "moon",
+      "shift": "0",
       "colors": {
         "main-bg-color": "#14171E",
         "content-bg-color": "#1B1F26",
