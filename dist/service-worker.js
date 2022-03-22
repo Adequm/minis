@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/minis/precache-manifest.150ea5ea8a6fc33445d4cddf78c6a07e.js"
+  "/minis/precache-manifest.eee513ce0af4c77055c9914304c4fe0f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "minis"});
