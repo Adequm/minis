@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b4277aacf05daa51ec1",
-    "url": "/minis/css/app.1ec7a904.css"
+    "revision": "ed57872cad2b14e086db",
+    "url": "/minis/css/chunk-220f0132.a38210c9.css"
   },
   {
-    "revision": "57abfe90bf8a5f70e551",
-    "url": "/minis/css/chunk-vendors.07fba5b2.css"
+    "revision": "7f712ca4413a15b2c671",
+    "url": "/minis/css/chunk-vendors.c37be62b.css"
   },
   {
     "revision": "706b86fa881ef644c6af4b9b66acdc98",
@@ -28,16 +28,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/img/confetti.e975c70f.svg"
   },
   {
-    "revision": "c02f4a9723e3e2caaf4b44902492cf43",
+    "revision": "1f5df3fabb2acf5683300dc63a5e35f1",
     "url": "/minis/index.html"
   },
   {
-    "revision": "5b4277aacf05daa51ec1",
-    "url": "/minis/js/app.8c461c0c.js"
+    "revision": "6cfc384c4ee78bf887a2",
+    "url": "/minis/js/app.2a1ee57a.js"
   },
   {
-    "revision": "57abfe90bf8a5f70e551",
-    "url": "/minis/js/chunk-vendors.891bc19f.js"
+    "revision": "ed57872cad2b14e086db",
+    "url": "/minis/js/chunk-220f0132.32834c18.js"
+  },
+  {
+    "revision": "7f712ca4413a15b2c671",
+    "url": "/minis/js/chunk-vendors.84078a8d.js"
   },
   {
     "revision": "b45fe23aa6e8a9c1882fcbc0d1eb7eed",
@@ -52,7 +56,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minis/themesJSON.json"
   },
   {
-    "revision": "d3bc7a419a1bca3d1a56f09ffd9f238a",
+    "revision": "f70e23b268def3d07b2a347a8b7ab8e7",
     "url": "/minis/translateJSON.json"
   }
 ]);
