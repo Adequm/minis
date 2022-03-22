@@ -1,7 +1,10 @@
 <template>
   <div 
     class="container" 
-    :class="{ fullscreen: isFullscreen || !isWidthMore768 || isFrame }"
+    :class="{ 
+      fullscreen: isFullscreen || isFrame, 
+      fullscreenFrame: isFullscreenInFrame,
+    }"
     :style="{ 
       height: `${ innerHeight }px`, 
       maxHeight: isDesktop ? `${ containerHeight }px` : '100vh',
@@ -17,7 +20,7 @@
         class="minis__wrapper"
         :style="{ 
           width: `${ appWidth }px`,
-          maxWidth: `${ isFullscreen || !isWidthMore768 || isFullscreenInFrame ? appWidth : containerWidth }px`,
+          maxWidth: `${ minisWrapperMaxWidth }px`,
         }"
       >
         <SettingsDesktop
