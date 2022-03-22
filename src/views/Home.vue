@@ -37,8 +37,7 @@
 
         <LayoutFrame
           :isResize="!!startResizeX"
-          :key="`${minisIndex}_${minis}_${isFullscreen || !isWidthMore768}`"
-          :link="`${ domen + minis }?isFullscreen=${ isFullscreen || !isWidthMore768 }&index=${ minisIndex }`"
+          :link="`${ domen + minis }?index=${ minisIndex }`"
           :style="{ filter: openedModalName ? 'blur(2px)' : 'none' }"
           @load="initFrameSettingsWatcher(minisIndex)"
         />
