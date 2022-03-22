@@ -61,7 +61,7 @@
         </AppModal>
 
         <div 
-          v-if="isDesktop" 
+          v-show="isDesktop" 
           class="resize_button" 
           @mousedown.prevent="startResize"
           @dblclick.prevent="autoResize"
