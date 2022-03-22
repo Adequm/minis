@@ -997,15 +997,15 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@minis-core/components@git+https://github.com/Adequm/minis-core-components.git":
-  version "1.0.6"
-  resolved "git+https://github.com/Adequm/minis-core-components.git#cd88e86cf5988c4a03f6ab7f425536bda9175a9d"
+  version "1.1.0"
+  resolved "git+https://github.com/Adequm/minis-core-components.git#3221ee10a8031c00f6ee2d47b02d302f7cc157d3"
   dependencies:
     lodash "^4.17.21"
     vue "^2.6.11"
 
 "@minis-core/mixins@git+https://github.com/Adequm/minis-core-mixins.git":
-  version "1.0.3"
-  resolved "git+https://github.com/Adequm/minis-core-mixins.git#8d5cd75256d9a6a7fb336366ec29b093eba5b532"
+  version "1.1.4"
+  resolved "git+https://github.com/Adequm/minis-core-mixins.git#19d57040c140eeb972769cec47d0c49773360d4a"
   dependencies:
     lodash "^4.17.21"
     vue "^3.2.31"
@@ -1358,6 +1358,13 @@
   dependencies:
     "@vue/cli-shared-utils" "^4.5.15"
 
+"@vue/cli-plugin-router@~4.5.15":
+  version "4.5.16"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-router/-/cli-plugin-router-4.5.16.tgz#d84f9172f7995097e2062c964d83ffe1e36e0ea8"
+  integrity sha512-aaroSwzSXo/2TNG7MFa6hyQMfXGqehvpdnZazTEn2N3Q1jxI/1jjeDEjXjA9mkgiBG7fY09ykRw1ORwEx9kScQ==
+  dependencies:
+    "@vue/cli-shared-utils" "^4.5.16"
+
 "@vue/cli-plugin-vuex@^4.5.15", "@vue/cli-plugin-vuex@~4.5.15":
   version "4.5.15"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-vuex/-/cli-plugin-vuex-4.5.15.tgz#466c1f02777d02fef53a9bb49a36cc3a3bcfec4e"
@@ -1437,6 +1444,24 @@
     launch-editor "^2.2.1"
     lru-cache "^5.1.1"
     node-ipc "^9.1.1"
+    open "^6.3.0"
+    ora "^3.4.0"
+    read-pkg "^5.1.1"
+    request "^2.88.2"
+    semver "^6.1.0"
+    strip-ansi "^6.0.0"
+
+"@vue/cli-shared-utils@^4.5.16":
+  version "4.5.16"
+  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.5.16.tgz#8b3b35eec8cf8e3374223dc970e2f0a947a97f89"
+  integrity sha512-9VrTpMmK2fE5JQlaXP79Xdhxv+opAsqtnj7QoFqahcz01lzLaBzzuag7W5oduhwqenrHRG3vaRUs563fwbOtZA==
+  dependencies:
+    "@hapi/joi" "^15.0.1"
+    chalk "^2.4.2"
+    execa "^1.0.0"
+    launch-editor "^2.2.1"
+    lru-cache "^5.1.1"
+    node-ipc "9.2.1"
     open "^6.3.0"
     ora "^3.4.0"
     read-pkg "^5.1.1"
@@ -5845,7 +5870,7 @@ node-gyp@^3.8.0:
     tar "^2.0.0"
     which "1"
 
-node-ipc@^9.1.1:
+node-ipc@9.2.1, node-ipc@^9.1.1:
   version "9.2.1"
   resolved "https://registry.yarnpkg.com/node-ipc/-/node-ipc-9.2.1.tgz#b32f66115f9d6ce841dc4ec2009d6a733f98bb6b"
   integrity sha512-mJzaM6O3xHf9VT8BULvJSbdVbmHUKRNOH7zDDkCrA1/T+CVjq2WVIDfLt0azZRXpgArJtl3rtmEozrbXPZ9GaQ==
@@ -8498,6 +8523,11 @@ vue-loader@^15.9.2:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-router@^3.2.0:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.3.tgz#041048053e336829d05dafacf6a8fb669a2e7999"
+  integrity sha512-FUlILrW3DGitS2h+Xaw8aRNvGTwtuaxrRkNSHWTizOfLUie7wuYwezeZ50iflRn8YPV5kxmU2LQuu3nM/b3Zsg==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.3"
