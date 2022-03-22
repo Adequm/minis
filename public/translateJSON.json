@@ -69,7 +69,7 @@
       }
     },
     "docx-template": { 
-      "title": "Шаблонизатор DOCX",
+      "title": "Шаблонизатор",
       "editor": {
         "title": "Редактор",
         "textareas": {
@@ -172,7 +172,7 @@
       }
     },
     "docx-template": {
-      "title": "Templater DOCX",
+      "title": "Templater",
       "editor": {
         "title": "Editor",
         "textareas": {
