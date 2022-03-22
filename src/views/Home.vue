@@ -66,8 +66,8 @@
         <div 
           v-show="isDesktop" 
           class="resize_button" 
-          @mousedown.prevent="startResize"
-          @dblclick.prevent="autoResize"
+          @mousedown.prevent="startResize($event, minisIndex)"
+          @dblclick.prevent="autoResize($event, minisIndex)"
         />
       </div>
     </div>
@@ -98,7 +98,7 @@ export default {
   ],
 
   beforeMount() {
-    this.links = ['calculator', 'comparison'];
+    this.links = ['calculator', 'calculator'];
   },
 };
 </script>
