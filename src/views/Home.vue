@@ -54,7 +54,8 @@
             v-if="openedModalName == 'settings'"
             :themeIcon="themeMain.icon"
             :isWidthMore768="isWidthMore768"
-            :showArrows="links.length > 1"
+            :isShowArrows="links.length > 1"
+            :isMinisHome="projectKey == 'home'"
             :title="translateChain(minis)('title')()"
             @switchTheme="switchTheme"
             @switchLang="switchLang"
@@ -98,7 +99,7 @@ export default {
   ],
 
   beforeMount() {
-    this.links = ['calculator', 'calculator'];
+    this.links = ['calculator', 'comparison'];
   },
 };
 </script>
