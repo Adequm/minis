@@ -12,14 +12,19 @@
   >
     <AppLoader v-if="!isPageLoad" :size="100" rotate/>
 
-    <div v-else class="frames__container">
+    <div 
+      v-else 
+      class="frames__container"
+      :style="{ cursor: isColResize ? 'col-resize' : 'inherit' }"
+    >
       <div 
         v-for="(minis, minisIndex) of links"
         :key="`${minis}_${minisIndex}`"
         v-show="!isFullscreen && isWidthMore768 || framePageIndex == minisIndex"
+        :id="`minis__wrapper_${minisIndex}`"
         class="minis__wrapper"
         :style="{ 
-          width: `${ appWidth }px`,
+          width: `${ isDesktop ? appWidths[minisIndex] : innerWidth }px`,
           maxWidth: `${ minisWrapperMaxWidth }px`,
         }"
       >
@@ -27,7 +32,7 @@
           v-show="!minisIndex && isDesktop && !isFrame"
           :themeIcon="themeMain.icon"
           :appHeight="appHeight"
-          :appWidth="appWidth"
+          :appWidth="appWidths[minisIndex]"
           :translate="translate"
           :translateDef="translateDef"
           :showHints="minisHints"
@@ -39,11 +44,17 @@
         />
 
         <LayoutFrame
-          :isResize="!!startResizeX"
+          :isResize="!!startResizeY"
           :link="`${ domen + minis }?index=${ minisIndex }`"
           :style="{ filter: openedModalName ? 'blur(2px)' : 'none' }"
           @load="initFrameSettingsWatcher(minisIndex)"
         />
+
+        <!-- <table :style="{ color: minisIndex == resizeIndexShift ? 'red' : 'black' }">
+          <tr><td>Старт:</td><td v-text="startResizeWidth[minisIndex] || appWidths[minisIndex]"/></tr>
+          <tr><td>Сейчас:</td><td v-text="appWidths[minisIndex]"/></tr>
+          <tr><td>Сейчас:</td><td v-text="appWidths[minisIndex]"/></tr>
+        </table> -->
 
         <AppModal 
           v-if="!isFullscreen || framePageIndex == minisIndex"
@@ -66,10 +77,19 @@
 
         <div 
           v-show="isDesktop" 
-          class="resize_button" 
+          class="resize_button"
+          :class="{ 'resize_button-resizes': startResizeX[minisIndex] && !isColResize }"
           @mousedown.prevent="startResize($event, minisIndex)"
-          @dblclick.prevent="autoResize($event, minisIndex)"
+          @dblclick.prevent.stop="autoResize"
         />
+
+        <!-- <div
+          v-show="minisIndex"
+          class="resize_col"
+          :class="{ 'resize_col-resizes': startResizeX[minisIndex] && isColResize }"
+          @mousedown.prevent="startResize($event, minisIndex, true)"
+          @dblclick.prevent.stop="autoResize"
+        /> -->
       </div>
     </div>
 
@@ -99,7 +119,14 @@ export default {
   ],
 
   beforeMount() {
-    this.links = ['calculator', 'comparison'];
+    this.links = ['comparison', 'calculator'];
+    // this.$nextTick(this.autoResize);
+    // this.containerHeight = 600
+    // this.containerWidth = {
+    //   0: 380,
+    //   1: 300,
+    //   2: 381
+    // }
   },
 };
 </script>
@@ -205,6 +232,7 @@ body {
       .resize_button {
         position: absolute;
         display: block;
+        user-select: none;
         width: 10px;
         height: 10px;
         background: var(--special-color);
@@ -215,6 +243,29 @@ body {
         clip-path: polygon(100% 0, 100% 100%, 0 100%);
         border-radius: 0 0 10px 0;
         cursor: se-resize;
+        &-resizes {
+          background: var(--text-color) !important;
+        }
+      }
+
+      .resize_col {
+        position: absolute;
+        left: calc(100% + 6px);
+        top: calc(50% - 50px);
+        height: 100px;
+        width: 8px;
+        border-radius: 4px;
+        background: var(--main-bg-color);
+        cursor: col-resize;
+        opacity: .25;
+        transition: .1s;
+        user-select: none;
+        &:hover {
+          opacity: .5;
+        }
+        &-resizes {
+          background: var(--text-color) !important;
+        }
       }
     }
 
