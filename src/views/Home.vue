@@ -50,12 +50,6 @@
           @load="initFrameSettingsWatcher(minisIndex)"
         />
 
-        <!-- <table :style="{ color: minisIndex == resizeIndexShift ? 'red' : 'black' }">
-          <tr><td>Старт:</td><td v-text="startResizeWidth[minisIndex] || appWidths[minisIndex]"/></tr>
-          <tr><td>Сейчас:</td><td v-text="appWidths[minisIndex]"/></tr>
-          <tr><td>Сейчас:</td><td v-text="appWidths[minisIndex]"/></tr>
-        </table> -->
-
         <AppModal 
           v-if="!isFullscreen || framePageIndex == minisIndex"
           v-model="openedModalName"
@@ -83,13 +77,13 @@
           @dblclick.prevent.stop="autoResize"
         />
 
-        <!-- <div
+        <div
           v-show="minisIndex"
           class="resize_col"
           :class="{ 'resize_col-resizes': startResizeX[minisIndex] && isColResize }"
           @mousedown.prevent="startResize($event, minisIndex, true)"
           @dblclick.prevent.stop="autoResize"
-        /> -->
+        />
       </div>
     </div>
 
@@ -120,13 +114,6 @@ export default {
 
   beforeMount() {
     this.links = ['comparison', 'calculator'];
-    // this.$nextTick(this.autoResize);
-    // this.containerHeight = 600
-    // this.containerWidth = {
-    //   0: 380,
-    //   1: 300,
-    //   2: 381
-    // }
   },
 };
 </script>
